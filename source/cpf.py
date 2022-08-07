@@ -6,10 +6,13 @@ class Cpf():
 
     def __init__(self,cpf:str):
         self.cpf = re.sub(r'\D+','', cpf.strip())
+        self.validate()
+    
+    def validate(self):
         if self.is_empty_string(): raise ValueError("cpf empty")
         if self.is_wrong_size():  raise ValueError("wrong cpf size")
         if self.is_digits_invalids(): raise ValueError("cpf invalid")
-    
+
     def is_empty_string(self) -> bool:
         return True if not self.cpf else False
         
