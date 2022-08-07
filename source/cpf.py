@@ -22,7 +22,6 @@ class Cpf():
     def is_digits_invalids(self)-> bool:
         digit_1 = self.calculate_digit(self.DIGIT_1_FACTOR)
         digit_2 = self.calculate_digit(self.DIGIT_2_FACTOR)
-        print(f"{digit_1}{digit_2}")
         return True if self.cpf[-2:] != f"{digit_1}{digit_2}" else False
 
     def calculate_digit(self, factor:int)->int :
