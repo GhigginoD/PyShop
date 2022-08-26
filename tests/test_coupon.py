@@ -10,8 +10,8 @@ def test_deve_aplicar_deconto_do_coupon():
 
 def test_deve_criar_cupon_expirado(): 
     coupon = Coupon('VALE10', 10, '2032-04-20T10:00:00')
-    isExpired = coupon.isExpired() 
-    assert isExpired == False   
+    is_expired = coupon.isExpired() 
+    assert is_expired == False   
 
 def test_deve_retornar_o_valor_integral_da_compra_cupons_expirados():
     coupon = Coupon('VALE10', 10, '2002-12-20T10:00:00')
